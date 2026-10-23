@@ -1,0 +1,5 @@
+import { ArrowUp, Github, Linkedin } from 'lucide-react';
+import { githubUrl, linkedinUrl } from '../lib/utils';
+export default function Footer() {
+  return <footer className="site-footer"><div className="shell footer-inner"><a className="brand" href="#top"><span className="brand-mark">SC</span><span>sumit<span className="brand-muted">.chankhore</span></span></a><p>Built with curiosity, clarity, and a bias toward useful insights.</p><div className="footer-right"><div className="footer-socials"><a href={linkedinUrl} aria-label="LinkedIn" target="_blank" rel="noreferrer"><Linkedin size={16} /></a>{githubUrl && <a href={githubUrl} aria-label="GitHub" target="_blank" rel="noreferrer"><Github size={16} /></a>}<a href="#top" aria-label="Back to top"><ArrowUp size={16} /></a></div><span>© {new Date().getFullYear()} Sumit Chankhore</span></div></div><div className="shell footer-disclaimer">Portfolio details and reported metrics should be verified against source resumes before public launch.</div></footer>;
+}

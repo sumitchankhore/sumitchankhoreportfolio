@@ -1,0 +1,8 @@
+import { Award, BookOpenCheck, GraduationCap } from 'lucide-react';
+import SectionHeading from './SectionHeading';
+export default function Education() {
+  return <section id="education" className="section section-education"><div className="shell"><SectionHeading eyebrow="Education & development" title="Building a strong foundation." description="Academic and ongoing learning details as provided in the portfolio brief." />
+    <div className="education-grid"><article className="education-card main-education"><div className="education-icon"><GraduationCap size={23} /></div><div className="education-label">UNDERGRADUATE DEGREE</div><h3>BCA — Data Science / Analytics</h3><p className="education-school">Ankushrao Tope College</p><p className="education-school muted">Dr. Babasaheb Ambedkar Marathwada University</p><div className="education-bottom"><span><BookOpenCheck size={15} /> Expected 2027</span><span className="education-score">8.54 <small>/ 10 CGPA*</small></span></div><p className="education-footnote">*CGPA and stated top-three class ranking require confirmation against academic records.</p></article>
+      <article className="education-card course-card"><div className="education-icon violet"><Award size={22} /></div><div className="education-label">ONGOING PROGRAM</div><h3>Data Science Program</h3><p className="education-school">DataMites</p><p className="course-copy">Currently in progress. Coursework and certification status should be updated as modules are completed.</p><span className="course-status"><span className="status-pulse" /> In progress</span></article></div>
+  </div></section>;
+}

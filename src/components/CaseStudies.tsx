@@ -1,0 +1,14 @@
+import { ArrowUpRight, BarChart3, ClipboardList, Megaphone, UsersRound } from 'lucide-react';
+import SectionHeading from './SectionHeading';
+const cases = [
+  { icon: BarChart3, code: 'CASE / 01', title: 'Reporting automation', metric: '83% reported reduction', body: 'Excel / Google Sheets workflows were described as reducing reporting turnaround time. A strong case study should show the old process, automated steps, before/after measurement window, and quality checks.', tags: ['Reporting', 'Workflow design', 'Data quality'] },
+  { icon: ClipboardList, code: 'CASE / 02', title: 'CRM & pipeline analytics', metric: 'Visibility through structure', body: 'Consistent lead stages, required fields, validation, and follow-up dates help teams distinguish new inquiries from qualified opportunities and spot gaps in the pipeline.', tags: ['CRM hygiene', 'Lead stages', 'Pipeline reporting'] },
+  { icon: UsersRound, code: 'CASE / 03', title: 'Operational monitoring', metric: '50+ team scope referenced', body: 'A regular operating view can bring together activity, lead ageing, follow-up completion, and blockers to support team planning without exposing individual or customer-level information.', tags: ['Team operations', 'KPI design', 'Planning'] },
+  { icon: Megaphone, code: 'CASE / 04', title: 'Campaign engagement', metric: '60% reported uplift', body: 'Engagement improvement is a reported figure in the brief. Before publication, define the engagement event, campaign sample, comparison periods, and whether audiences and channels were comparable.', tags: ['Campaign tracking', 'Measurement', 'Analysis'] },
+];
+export default function CaseStudies() {
+  return <section className="section section-cases"><div className="shell"><SectionHeading eyebrow="Business intelligence in practice" title="Analytics tied to real work." description="Four operational case studies that connect business context to measurable questions. Details are generalized to protect confidential information." />
+    <div className="cases-grid">{cases.map((item) => <article className="case-card" key={item.code}><div className="case-card-top"><span className="case-icon"><item.icon size={19} /></span><span className="mono-label">{item.code}</span></div><span className="case-metric">{item.metric}</span><h3>{item.title}</h3><p>{item.body}</p><div className="case-tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></article>)}</div>
+    <div className="synthetic-note"><span className="synthetic-mark">i</span><p><strong>Data integrity note.</strong> Any dashboard or chart on this site is illustrative design—not actual company reporting. No confidential company, employee, or customer data is included.</p><a href="#contact" className="text-link">Discuss a case <ArrowUpRight size={14} /></a></div>
+  </div></section>;
+}
